@@ -13,7 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-
     - name: Building docker image
       run: docker build . --file Dockerfile --tag random-pics:$(date +%s)
 
