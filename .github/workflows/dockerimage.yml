@@ -16,7 +16,6 @@ jobs:
     - name: building docker image
       run: docker build . --file Dockerfile --tag random-pics:$(date +%s)
 
-    - name: publishing to dockerhub
     - uses: manusa/actions-publish-docker@v1.0.1
       with:
         # Name of the Docker image
