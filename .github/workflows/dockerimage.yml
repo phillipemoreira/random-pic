@@ -1,0 +1,32 @@
+name: Docker Image CI
+
+on:
+ push:
+  branches:
+  - master
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: random-pics
+      run: docker build . --file Dockerfile --tag random-pics:$(date +%s)
+
+    - uses: manusa/actions-publish-docker@v1.0.1
+      with:
+        # Name of the Docker image
+        name: phillipe/random-pics
+
+        # Tag for the Docker image
+        tag: $(date +%s)
+               
+        # Username for Docker registry
+        username: phillipe
+        
+        # Password for Docker registry
+        password: 0af77255-dbe8-43a6-bd1c-5f0e70353632
+      
