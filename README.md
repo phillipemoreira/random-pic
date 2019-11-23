@@ -4,7 +4,7 @@ Shows you a random image based on a key
 
 ## Pre-requisites
 
-- docker (OR)
+- docker **(OR)**
 - node
 
 ## Running
@@ -21,4 +21,4 @@ Then **access** `http://localhost:3000`
 
 ## "Production build"
 
-Access: `https://random-pics.herokuapp.com` 
+Access: https://random-pics.herokuapp.com
