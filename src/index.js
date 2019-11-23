@@ -1,5 +1,6 @@
   function changeImage() {
-      var keyword = "monster";
+      const urlParams = new URLSearchParams(window.location.search);
+      const keyword = urlParams.get('key');
 
       document.getElementById('spinner-div').classList.remove('invisible');
       document.getElementById('image-container').classList.add('withOverlay');
@@ -15,8 +16,8 @@
               document.getElementById("the-image").src = image_src;
 
               setTimeout(() => {
-                document.getElementById('spinner-div').classList.add('invisible');
-                document.getElementById('image-container').classList.remove('withOverlay');
+                  document.getElementById('spinner-div').classList.add('invisible');
+                  document.getElementById('image-container').classList.remove('withOverlay');
               }, 500);
           });
   }
