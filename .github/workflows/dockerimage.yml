@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: random-pics
+    - name: building docker image
       run: docker build . --file Dockerfile --tag random-pics:$(date +%s)
 
     - uses: manusa/actions-publish-docker@v1.0.1
@@ -28,5 +28,5 @@ jobs:
         username: phillipe
         
         # Password for Docker registry
-        password: 0af77255-dbe8-43a6-bd1c-5f0e70353632
+        password: ${{ secrets.docker_token }}
       
