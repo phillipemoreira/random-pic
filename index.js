@@ -2,6 +2,8 @@ var path = require('path');
 var express = require('express');
 var app = express();
 
+var port = process.env.PORT || 3000;
+
 app.get('/', function (req, res) {
     var key = process.env.KEY;
 
@@ -11,6 +13,6 @@ app.get('/', function (req, res) {
   
 app.use(express.static(__dirname + '/src'));
 
-app.listen(3000, function () {
+app.listen(port, function () {
     console.log('Example app listening on port 3000!');
 });
