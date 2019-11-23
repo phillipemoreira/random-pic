@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Release
 
 on:
  push:
@@ -13,8 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+
     - name: Building docker image
-      run: docker build . --file Dockerfile --tag random-pics:$(date +%s)
+      run: docker build . --file Dockerfile --tag random-pics:${{github.sha}}
 
     - uses: manusa/actions-publish-docker@v1.0.1
       with:
@@ -22,7 +23,7 @@ jobs:
         name: phillipe/random-pics
 
         # Tag for the Docker image
-        tag: $(date +%s)
+        tag: ${{github.sha}}
                
         # Username for Docker registry
         username: phillipe
