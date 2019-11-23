@@ -13,7 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: building docker image
+
+    - name: Building docker image
       run: docker build . --file Dockerfile --tag random-pics:$(date +%s)
 
     - uses: manusa/actions-publish-docker@v1.0.1
