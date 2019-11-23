@@ -1,0 +1,19 @@
+{
+  "name": "random-pic",
+  "version": "0.0.1",
+  "description": "Shows you a random google image",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phillipemoreira/random-pic.git"
+  },
+  "author": "Phillipe Moreira",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/phillipemoreira/random-pic#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
